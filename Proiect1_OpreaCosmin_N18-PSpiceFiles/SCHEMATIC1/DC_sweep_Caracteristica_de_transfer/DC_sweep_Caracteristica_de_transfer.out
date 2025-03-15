@@ -1,0 +1,220 @@
+
+**** 11/22/24 14:16:18 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC_sweep_Caracteristica_de_transfer"  [ d:\proiect1bun\proiect1_opreacosmin_n18-PSpiceFiles\SCHEMATIC1\DC_sw
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "DC_sweep_Caracteristica_de_transfer.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../modele_a1_lib/1n4148.lib" 
+.LIB "../../../modele_a1_lib/bc807-25.lib" 
+.LIB "../../../modele_a1_lib/bc817-25.lib" 
+.LIB "../../../modele_a1_lib/bc846b.lib" 
+.LIB "../../../modele_a1_lib/bc856b.lib" 
+.LIB "../../../modele_a1_lib/bzx84c2v7.lib" 
+.LIB "../../../modele_a1_lib/bzx84c5v1.lib" 
+.LIB "../../../modele_a1_lib/bzx84c5v6.lib" 
+.LIB "../../../modele_a1_lib/bzx84c6v2.lib" 
+.LIB "../../../modele_a1_lib/bzx84c6v8.lib" 
+.LIB "../../../modele_a1_lib/bzx84c8v2.lib" 
+.LIB "../../../modele_a1_lib/bzx84c10.lib" 
+.LIB "../../../modele_a1_lib/irfr120npbf.lib" 
+.LIB "../../../modele_a1_lib/mjd31cg.lib" 
+.LIB "../../../modele_a1_lib/mjd32cg.lib" 
+.LIB "../../../modele_a1_lib/mmbfj177lt1g.lib" 
+.LIB "../../../modele_a1_lib/mmbfj309lt1g.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Cosmin\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V5 -5 5 0.1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT1_OPREACOSMIN_N18
+R_R2         N189847 N1896251  51 TC=0,0 
+R_R6         N188663 N188539  10 TC=0,0 
+R_R1         N189847 N189675  68 TC=0,0 
+Q_Q5         N188797 N188797 N188663 QBC856B 
+R_R4         N189127 0  10k TC=0,0 
+Q_Q6         N188819 N188797 N188669 QBC856B 
+Q_Q4         N188819 N237791 N189245 QBC817-25 
+Q_Q1         N189567 N189567 N189675 QBC846B 
+R_RL         N231069 0  18k TC=0,0 
+R_R7         N188669 N188539  10 TC=0,0 
+C_C5         IN+ N189005  2.2n  TC=0,0 
+R_R5         N189027 N189127  22k TC=0,0 
+X_P3         N189027 N189005 N189005 POT PARAMS: SET=0.2 VALUE=10k
+X_P1         0 N189825 N189671 POT PARAMS: SET=0.1 VALUE=500k
+X_D3         N189671 N189387 awb1n4148 PARAMS:                
+R_Rf         N189567 0  1k TC=0,0 
+Q_Q3         N188797 N189127 N189199 QBC817-25 
+R_R8         N189027 N189387  5k TC=0,0 
+Q_Q2         N189351 N189567 N1896251 QBC846B 
+C_C4         0 N189671  470n  TC=0,0 
+X_P2         IN+ 0 0 POT PARAMS: SET=0.2 VALUE=10k
+X_P4         N189199 N189351 N189245 POT PARAMS: SET=0.5 VALUE=100
+C_C2         0 IN+  2.2n  TC=0,0 
+J_T1         0 N189825 0 JMMBFJ309LT1 
+V_V3         N188539 0 5
+V_V4         0 N189847 5
+X_D6         N188539 N211822 LED PARAMS: IS=5.6404e-029 RS=25  BV=5 IBV=5E-6   
++       
+R_RD6         0 N211822  100 TC=0,0 
+X_D7         N212519 N189847 LED PARAMS: IS=5.6404e-029 RS=25  BV=5 IBV=5E-6   
++       
+R_RD7         N212519 0  100 TC=0,0 
+Q_Q8         N189027 N189567 N2182811 QBC846B 
+R_R3         N189847 N2182811  22 TC=0,0 
+Q_Q7         N189027 N188819 N188539 QBC856B 
+C_C6         N188819 N189027  470p  TC=0,0 
+X_P5         N189027 N231069 0 POT PARAMS: SET=0.375 VALUE=10k
+V_V5         N237791 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING DC_sweep_Caracteristica_de_transfer.cir ****
+.END
+
+**** 11/22/24 14:16:18 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC_sweep_Caracteristica_de_transfer"  [ d:\proiect1bun\proiect1_opreacosmin_n18-PSpiceFiles\SCHEMATIC1\DC_sw
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_D3.model22    X_D6.model201   X_D7.model201   
+          IS    1.000000E-09   56.404000E-30   56.404000E-30 
+           N    1.55            2               2            
+          BV  120               5               5            
+         IBV    1               5.000000E-06    5.000000E-06 
+          RS     .5            25              25            
+          TT    5.000000E-09                                 
+         CJO    1.850000E-12                                 
+          VJ     .65                                         
+           M     .18                                         
+          EG    1.11                                         
+
+
+**** 11/22/24 14:16:18 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC_sweep_Caracteristica_de_transfer"  [ d:\proiect1bun\proiect1_opreacosmin_n18-PSpiceFiles\SCHEMATIC1\DC_sw
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QBC817-25       QBC846B         QBC856B         
+               NPN             NPN             PNP             
+       LEVEL    1               1               1            
+          IS   91.980000E-15   18.220000E-15   20.140000E-15 
+          BF  338.8           324.4           315.3          
+          NF    1.003            .9932           .9974       
+         VAF  107.9            82              39.15         
+         IKF     .4913           .109            .079        
+         ISE  446.800000E-18  289.400000E-18    6.578000E-15 
+          NE    1.65            1.4             1.45         
+          BR   29.48            8.29            8.68         
+          NR    1.002            .9931           .9952       
+         VAR   25              17.9             9.5          
+         IKR     .193            .09             .09         
+         ISC    5.109000E-15    9.982000E-12   16.330000E-15 
+          NC    1.071           1.763           1.15         
+         ISS    0               0               0            
+          RB    1              10              10            
+         RBM    1               5               5.000000E-06 
+         IRB    1.000000E+03    5.000000E-06    5.000000E-06 
+          RE     .2126           .649            .663        
+          RC     .143            .7014           .718        
+         CJE   38.250000E-12   12.440000E-12   11.350000E-12 
+         VJE     .7004           .7579           .7071       
+         MJE     .364            .3656           .3808       
+         CJC   12.700000E-12    3.347000E-12    6.395000E-12 
+         VJC     .4431           .5463           .4951       
+         MJC     .3983           .391            .44         
+        XCJC     .4555           .6193           .6288       
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+         MJS     .333            .333            .333        
+          FC     .905            .979            .9059       
+          TF  522.900000E-12  490.800000E-12  654.600000E-12 
+         XTF  219.7             9.51            5.387        
+         VTF    3.502           2.927           6.245        
+         ITF    7.257            .3131           .2108       
+          TR   70.000000E-12   90.000000E-09   55.000000E-09 
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.2          
+           D     .87             .87             .52         
+
+
+**** 11/22/24 14:16:18 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC_sweep_Caracteristica_de_transfer"  [ d:\proiect1bun\proiect1_opreacosmin_n18-PSpiceFiles\SCHEMATIC1\DC_sw
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               JMMBFJ309LT1    
+               NJF             
+         VTO   -1.7          
+        BETA    5.560100E-03 
+      LAMBDA     .02184      
+          IS    1.333600E-12 
+          RD     .1          
+          RS     .1          
+         CGD    5.351520E-12 
+         CGS    5.071890E-12 
+          PB    2.41896      
+          KF    9.999820E-21 
+          AF     .200092     
+
+
+
+          JOB CONCLUDED
+
+**** 11/22/24 14:16:18 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC_sweep_Caracteristica_de_transfer"  [ d:\proiect1bun\proiect1_opreacosmin_n18-PSpiceFiles\SCHEMATIC1\DC_sw
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

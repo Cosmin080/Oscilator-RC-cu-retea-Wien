@@ -1,0 +1,672 @@
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Proiect1_OpreaCosmin_N18.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../modele_a1_lib/1n4148.lib" 
+.LIB "../../../modele_a1_lib/bc807-25.lib" 
+.LIB "../../../modele_a1_lib/bc817-25.lib" 
+.LIB "../../../modele_a1_lib/bc846b.lib" 
+.LIB "../../../modele_a1_lib/bc856b.lib" 
+.LIB "../../../modele_a1_lib/bzx84c2v7.lib" 
+.LIB "../../../modele_a1_lib/bzx84c5v1.lib" 
+.LIB "../../../modele_a1_lib/bzx84c5v6.lib" 
+.LIB "../../../modele_a1_lib/bzx84c6v2.lib" 
+.LIB "../../../modele_a1_lib/bzx84c6v8.lib" 
+.LIB "../../../modele_a1_lib/bzx84c8v2.lib" 
+.LIB "../../../modele_a1_lib/bzx84c10.lib" 
+.LIB "../../../modele_a1_lib/irfr120npbf.lib" 
+.LIB "../../../modele_a1_lib/mjd31cg.lib" 
+.LIB "../../../modele_a1_lib/mjd32cg.lib" 
+.LIB "../../../modele_a1_lib/mmbfj177lt1g.lib" 
+.LIB "../../../modele_a1_lib/mmbfj309lt1g.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Cosmin\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 14ms 0 1u 
+.TEMP  0 25 50 70 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT1_OPREACOSMIN_N18
+R_R2         N189847 N1896251  51 TC=0,0 
+R_R6         N188663 N188539  10 TC=0,0 
+R_R1         N189847 N189675  68 TC=0,0 
+Q_Q5         N188797 N188797 N188663 QBC856B 
+R_R4         N189127 N189515  10k TC=0,0 
+Q_Q6         N188819 N188797 N188669 QBC856B 
+Q_Q4         N188819 IN+ N189245 QBC817-25 
+Q_Q1         N189567 N189567 N189675 QBC846B 
+R_RL         N231069 0  18k TC=0,0 
+R_R7         N188669 N188539  10 TC=0,0 
+C_C5         IN+ N189005  2.2n  TC=0,0 
+R_R5         N189027 N189127  22k TC=0,0 
+X_P3         N189027 N189005 N189005 POT PARAMS: SET=0.2 VALUE=10k
+X_P1         0 N189825 N189671 POT PARAMS: SET=0.1 VALUE=500k
+X_D3         N189671 N189387 awb1n4148 PARAMS:                
+R_Rf         N189567 0  1k TC=0,0 
+Q_Q3         N188797 N189127 N189199 QBC817-25 
+R_R8         N189027 N189387  5k TC=0,0 
+Q_Q2         N189351 N189567 N1896251 QBC846B 
+C_C4         0 N189671  470n  TC=0,0 
+X_P2         IN+ 0 0 POT PARAMS: SET=0.2 VALUE=10k
+X_P4         N189199 N189351 N189245 POT PARAMS: SET=0.5 VALUE=100
+C_C2         0 IN+  2.2n  TC=0,0 
+J_T1         0 N189825 N189515 JMMBFJ309LT1 
+V_V3         N188539 0 5
+V_V4         0 N189847 5
+X_D6         N188539 N211822 LED PARAMS: IS=5.6404e-029 RS=25  BV=5 IBV=5E-6   
++       
+R_RD6         0 N211822  100 TC=0,0 
+X_D7         N212519 N189847 LED PARAMS: IS=5.6404e-029 RS=25  BV=5 IBV=5E-6   
++       
+R_RD7         N212519 0  100 TC=0,0 
+Q_Q8         N189027 N189567 N2182811 QBC846B 
+R_R3         N189847 N2182811  22 TC=0,0 
+Q_Q7         N189027 N188819 N188539 QBC856B 
+C_C6         N188819 N189027  470p  TC=0,0 
+X_P5         N189027 N231069 0 POT PARAMS: SET=0.375 VALUE=10k
+
+**** RESUMING Proiect1_OpreaCosmin_N18.cir ****
+.END
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_D3.model22    X_D6.model201   X_D7.model201   
+          IS    1.000000E-09   56.404000E-30   56.404000E-30 
+           N    1.55            2               2            
+          BV  120               5               5            
+         IBV    1               5.000000E-06    5.000000E-06 
+          RS     .5            25              25            
+          TT    5.000000E-09                                 
+         CJO    1.850000E-12                                 
+          VJ     .65                                         
+           M     .18                                         
+          EG    1.11                                         
+
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QBC817-25       QBC846B         QBC856B         
+               NPN             NPN             PNP             
+       LEVEL    1               1               1            
+          IS   91.980000E-15   18.220000E-15   20.140000E-15 
+          BF  338.8           324.4           315.3          
+          NF    1.003            .9932           .9974       
+         VAF  107.9            82              39.15         
+         IKF     .4913           .109            .079        
+         ISE  446.800000E-18  289.400000E-18    6.578000E-15 
+          NE    1.65            1.4             1.45         
+          BR   29.48            8.29            8.68         
+          NR    1.002            .9931           .9952       
+         VAR   25              17.9             9.5          
+         IKR     .193            .09             .09         
+         ISC    5.109000E-15    9.982000E-12   16.330000E-15 
+          NC    1.071           1.763           1.15         
+         ISS    0               0               0            
+          RB    1              10              10            
+         RBM    1               5               5.000000E-06 
+         IRB    1.000000E+03    5.000000E-06    5.000000E-06 
+          RE     .2126           .649            .663        
+          RC     .143            .7014           .718        
+         CJE   38.250000E-12   12.440000E-12   11.350000E-12 
+         VJE     .7004           .7579           .7071       
+         MJE     .364            .3656           .3808       
+         CJC   12.700000E-12    3.347000E-12    6.395000E-12 
+         VJC     .4431           .5463           .4951       
+         MJC     .3983           .391            .44         
+        XCJC     .4555           .6193           .6288       
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+         MJS     .333            .333            .333        
+          FC     .905            .979            .9059       
+          TF  522.900000E-12  490.800000E-12  654.600000E-12 
+         XTF  219.7             9.51            5.387        
+         VTF    3.502           2.927           6.245        
+         ITF    7.257            .3131           .2108       
+          TR   70.000000E-12   90.000000E-09   55.000000E-09 
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.2          
+           D     .87             .87             .52         
+
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               JMMBFJ309LT1    
+               NJF             
+         VTO   -1.7          
+        BETA    5.560100E-03 
+      LAMBDA     .02184      
+          IS    1.333600E-12 
+          RD     .1          
+          RS     .1          
+         CGD    5.351520E-12 
+         CGS    5.071890E-12 
+          PB    2.41896      
+          KF    9.999820E-21 
+          AF     .200092     
+
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =    0.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** DIODE MODEL PARAMETERS
+
+                X_D3.model22   X_D6.model201  X_D7.model201 
+
+         IS        5.397E-11      5.871E-30      5.871E-30  
+         VJ        7.055E-01      1.024E+00      1.024E+00  
+        CJO        1.818E-12      0.000E+00      0.000E+00  
+         RS        5.000E-01      2.500E+01      2.500E+01  
+        IKF        0.000E+00      0.000E+00      0.000E+00  
+         BV        1.200E+02      5.000E+00      5.000E+00  
+
+
+ **** JFET MODEL PARAMETERS
+
+                JMMBFJ309LT1                                
+
+        VTO       -1.700E+00  
+       BETA        5.560E-03  
+         IS        1.445E-14  
+         PB        2.315E+00  
+        CGS        5.153E-12  
+        CGD        5.437E-12  
+
+
+ **** BJT MODEL PARAMETERS
+
+                   QBC856B       QBC817-25       QBC846B    
+
+         BF        3.153E+02      3.388E+02      3.244E+02  
+        ISE        2.903E-16      2.878E-17      1.142E-17  
+        VJE        7.574E-01      7.513E-01      8.037E-01  
+        CJE        1.100E-11      3.709E-11      1.212E-11  
+         RE        6.630E-01      2.126E-01      6.490E-01  
+         RB        1.000E+01      1.000E+00      1.000E+01  
+         BR        8.680E+00      2.948E+01      8.290E+00  
+        ISC        3.193E-16      7.472E-17      7.666E-13  
+        VJC        5.645E-01      5.172E-01      6.111E-01  
+        CJC        5.970E-12      1.180E-11      3.178E-12  
+         RC        7.180E-01      1.430E-01      7.014E-01  
+        RBM        5.000E-06      1.000E+00      5.000E+00  
+         IS        2.182E-16      9.966E-16      1.974E-16  
+        ISS        0.000E+00      0.000E+00      0.000E+00  
+        VJS        7.965E-01      7.965E-01      7.965E-01  
+        CJS        0.000E+00      0.000E+00      0.000E+00  
+      GAMMA        1.000E-11      1.000E-11      1.000E-11  
+        RCO        0.000E+00      0.000E+00      0.000E+00  
+         VO        1.000E+01      1.000E+01      1.000E+01  
+
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =    0.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN+)    -.0603  (N188539)    5.0000                   (N188663)    4.9746    
+
+(N188669)    4.9746                   (N188797)    4.2640                       
+
+(N188819)    4.2500                   (N189005)    -.0317                       
+
+(N189027)    -.0317                   (N189127)    -.0615                       
+
+(N189199)    -.7364                   (N189245)    -.7353                       
+
+(N189351)    -.8642                   (N189387)    -.0317                       
+
+(N189515)-324.7E-06                   (N189567)   -4.0105                       
+
+(N189671)-37.35E-06                   (N189675)   -4.7309                       
+
+(N189825)-33.62E-06                   (N189847)   -5.0000                       
+
+(N211822)    1.6204                   (N212519)   -1.6204                       
+
+(N231069)    -.0105                   (N1896251)   -4.7372                      
+
+(N2182811)   -4.7596                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -3.222E-02
+    V_V4        -3.624E-02
+
+    TOTAL POWER DISSIPATION   3.42E-01  WATTS
+
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   25.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** DIODE MODEL PARAMETERS
+
+                X_D3.model22   X_D6.model201  X_D7.model201 
+
+         IS        8.198E-10      4.836E-29      4.836E-29  
+         VJ        6.541E-01      1.002E+00      1.002E+00  
+        CJO        1.848E-12      0.000E+00      0.000E+00  
+         RS        5.000E-01      2.500E+01      2.500E+01  
+        IKF        0.000E+00      0.000E+00      0.000E+00  
+         BV        1.200E+02      5.000E+00      5.000E+00  
+
+
+ **** JFET MODEL PARAMETERS
+
+                JMMBFJ309LT1                                
+
+        VTO       -1.700E+00  
+       BETA        5.560E-03  
+         IS        9.801E-13  
+         PB        2.411E+00  
+        CGS        5.078E-12  
+        CGD        5.358E-12  
+
+
+ **** BJT MODEL PARAMETERS
+
+                   QBC856B       QBC817-25       QBC846B    
+
+         BF        3.153E+02      3.388E+02      3.244E+02  
+        ISE        5.319E-15      3.707E-16      2.323E-16  
+        VJE        7.109E-01      7.042E-01      7.613E-01  
+        CJE        1.132E-11      3.816E-11      1.242E-11  
+         RE        6.630E-01      2.126E-01      6.490E-01  
+         RB        1.000E+01      1.000E+00      1.000E+01  
+         BR        8.680E+00      2.948E+01      8.290E+00  
+        ISC        1.249E-14      3.832E-15      8.382E-12  
+        VJC        5.003E-01      4.486E-01      5.511E-01  
+        CJC        6.363E-12      1.263E-11      3.334E-12  
+         RC        7.180E-01      1.430E-01      7.014E-01  
+        RBM        5.000E-06      1.000E+00      5.000E+00  
+         IS        1.480E-14      6.760E-14      1.339E-14  
+        ISS        0.000E+00      0.000E+00      0.000E+00  
+        VJS        7.535E-01      7.535E-01      7.535E-01  
+        CJS        0.000E+00      0.000E+00      0.000E+00  
+      GAMMA        1.000E-11      1.000E-11      1.000E-11  
+        RCO        0.000E+00      0.000E+00      0.000E+00  
+         VO        1.000E+01      1.000E+01      1.000E+01  
+
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   25.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN+)    -.0606  (N188539)    5.0000                   (N188663)    4.9744    
+
+(N188669)    4.9744                   (N188797)    4.3069                       
+
+(N188819)    4.2901                   (N189005)    -.0319                       
+
+(N189027)    -.0319                   (N189127)    -.0619                       
+
+(N189199)    -.6900                   (N189245)    -.6889                       
+
+(N189351)    -.8189                   (N189387)    -.0319                       
+
+(N189515)-326.9E-06                   (N189567)   -4.0495                       
+
+(N189671)-492.7E-06                   (N189675)   -4.7283                       
+
+(N189825)-443.4E-06                   (N189847)   -5.0000                       
+
+(N211822)    1.4927                   (N212519)   -1.4927                       
+
+(N231069)    -.0106                   (N1896251)   -4.7350                      
+
+(N2182811)   -4.7589                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -3.101E-02
+    V_V4        -3.508E-02
+
+    TOTAL POWER DISSIPATION   3.30E-01  WATTS
+
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   50.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** DIODE MODEL PARAMETERS
+
+                X_D3.model22   X_D6.model201  X_D7.model201 
+
+         IS        8.278E-09      2.902E-28      2.902E-28  
+         VJ        6.019E-01      9.787E-01      9.787E-01  
+        CJO        1.878E-12      0.000E+00      0.000E+00  
+         RS        5.000E-01      2.500E+01      2.500E+01  
+        IKF        0.000E+00      0.000E+00      0.000E+00  
+         BV        1.200E+02      5.000E+00      5.000E+00  
+
+
+ **** JFET MODEL PARAMETERS
+
+                JMMBFJ309LT1                                
+
+        VTO       -1.700E+00  
+       BETA        5.560E-03  
+         IS        3.530E-11  
+         PB        2.506E+00  
+        CGS        5.004E-12  
+        CGD        5.279E-12  
+
+
+ **** BJT MODEL PARAMETERS
+
+                   QBC856B       QBC817-25       QBC846B    
+
+         BF        3.153E+02      3.388E+02      3.244E+02  
+        ISE        6.300E-14      3.254E-15      3.004E-15  
+        VJE        6.634E-01      6.561E-01      7.181E-01  
+        CJE        1.166E-11      3.926E-11      1.272E-11  
+         RE        6.630E-01      2.126E-01      6.490E-01  
+         RB        1.000E+01      1.000E+00      1.000E+01  
+         BR        8.680E+00      2.948E+01      8.290E+00  
+        ISC        2.820E-13      1.088E-13      6.401E-11  
+        VJC        4.351E-01      3.791E-01      4.902E-01  
+        CJC        6.762E-12      1.348E-11      3.493E-12  
+         RC        7.180E-01      1.430E-01      7.014E-01  
+        RBM        5.000E-06      1.000E+00      5.000E+00  
+         IS        5.331E-13      2.435E-12      4.823E-13  
+        ISS        0.000E+00      0.000E+00      0.000E+00  
+        VJS        7.095E-01      7.095E-01      7.095E-01  
+        CJS        0.000E+00      0.000E+00      0.000E+00  
+      GAMMA        1.000E-11      1.000E-11      1.000E-11  
+        RCO        0.000E+00      0.000E+00      0.000E+00  
+         VO        1.000E+01      1.000E+01      1.000E+01  
+
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   50.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN+)    -.0610  (N188539)    5.0000                   (N188663)    4.9742    
+
+(N188669)    4.9741                   (N188797)    4.3503                       
+
+(N188819)    4.3308                   (N189005)    -.0321                       
+
+(N189027)    -.0321                   (N189127)    -.0623                       
+
+(N189199)    -.6430                   (N189245)    -.6420                       
+
+(N189351)    -.7731                   (N189387)    -.0321                       
+
+(N189515)-329.5E-06                   (N189567)   -4.0890                       
+
+(N189671)    -.0038                   (N189675)   -4.7256                       
+
+(N189825)    -.0034                   (N189847)   -5.0000                       
+
+(N211822)    1.3663                   (N212519)   -1.3663                       
+
+(N231069)    -.0107                   (N1896251)   -4.7327                      
+
+(N2182811)   -4.7582                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -2.982E-02
+    V_V4        -3.393E-02
+
+    TOTAL POWER DISSIPATION   3.19E-01  WATTS
+
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   70.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** DIODE MODEL PARAMETERS
+
+                X_D3.model22   X_D6.model201  X_D7.model201 
+
+         IS        4.163E-08      1.015E-27      1.015E-27  
+         VJ        5.594E-01      9.596E-01      9.596E-01  
+        CJO        1.902E-12      0.000E+00      0.000E+00  
+         RS        5.000E-01      2.500E+01      2.500E+01  
+        IKF        0.000E+00      0.000E+00      0.000E+00  
+         BV        1.200E+02      5.000E+00      5.000E+00  
+
+
+ **** JFET MODEL PARAMETERS
+
+                JMMBFJ309LT1                                
+
+        VTO       -1.700E+00  
+       BETA        5.560E-03  
+         IS        4.316E-10  
+         PB        2.582E+00  
+        CGS        4.945E-12  
+        CGD        5.217E-12  
+
+
+ **** BJT MODEL PARAMETERS
+
+                   QBC856B       QBC817-25       QBC846B    
+
+         BF        3.153E+02      3.388E+02      3.244E+02  
+        ISE        3.541E-13      1.484E-14      1.796E-14  
+        VJE        6.247E-01      6.171E-01      6.828E-01  
+        CJE        1.193E-11      4.015E-11      1.297E-11  
+         RE        6.630E-01      2.126E-01      6.490E-01  
+         RB        1.000E+01      1.000E+00      1.000E+01  
+         BR        8.680E+00      2.948E+01      8.290E+00  
+        ISC        2.487E-12      1.127E-12      2.648E-10  
+        VJC        3.824E-01      3.229E-01      4.409E-01  
+        CJC        7.084E-12      1.416E-11      3.622E-12  
+         RC        7.180E-01      1.430E-01      7.014E-01  
+        RBM        5.000E-06      1.000E+00      5.000E+00  
+         IS        6.517E-12      2.976E-11      5.896E-12  
+        ISS        0.000E+00      0.000E+00      0.000E+00  
+        VJS        6.738E-01      6.738E-01      6.738E-01  
+        CJS        0.000E+00      0.000E+00      0.000E+00  
+      GAMMA        1.000E-11      1.000E-11      1.000E-11  
+        RCO        0.000E+00      0.000E+00      0.000E+00  
+         VO        1.000E+01      1.000E+01      1.000E+01  
+
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   70.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN+)    -.0613  (N188539)    5.0000                   (N188663)    4.9740    
+
+(N188669)    4.9740                   (N188797)    4.3853                       
+
+(N188819)    4.3637                   (N189005)    -.0323                       
+
+(N189027)    -.0323                   (N189127)    -.0626                       
+
+(N189199)    -.6052                   (N189245)    -.6041                       
+
+(N189351)    -.7361                   (N189387)    -.0322                       
+
+(N189515)-332.6E-06                   (N189567)   -4.1210                       
+
+(N189671)    -.0117                   (N189675)   -4.7234                       
+
+(N189825)    -.0105                   (N189847)   -5.0000                       
+
+(N211822)    1.2661                   (N212519)   -1.2661                       
+
+(N231069)    -.0107                   (N1896251)   -4.7309                      
+
+(N2182811)   -4.7576                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -2.888E-02
+    V_V4        -3.302E-02
+
+    TOTAL POWER DISSIPATION   3.10E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/22/24 14:11:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Proiect1_OpreaCosmin_N18"  [ d:\proiect1bun\proiect1_opreacosmin_n18-pspicefiles\schematic1\proiect1_opreaco
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        3.77
+
